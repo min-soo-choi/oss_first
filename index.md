@@ -74,8 +74,8 @@ or
 
 * 형식 3: <https://www.google.co.kr/?client=safari&channel=mac_bm>
 
-* 형식 4: [![이미지대체텍스트](이미지URL)](링크URL)
-
+* 형식 4: [![이미지대체텍스트](이미지URL)](링크URL)    
+         이미지대체텍스트 이미지url 링크url 순서
 # 이미지 (Images)
 
 형식: ![이미지 설명](이미지 링크)
