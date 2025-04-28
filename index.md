@@ -114,3 +114,40 @@ size 변경은 제공 안함 필요시 html tag 활용하기
 
 ```python 
 import pandas as pd```
+
+# 기본 요소
+* _config.yml   
+    * 기본 설정 파일
+* _posts    
+    * 작성 콘텐츠 (블로그의 포스트 역할)    
+    * 타이틀 형식 : year-month-day-title
+* _site 
+    * Jekyll에 의해 자동 변환된 내용
+* .jekyll cache 
+    * jekyll serve 명령어 수행 시, 빠른 실행을 위한 임시 파일을 보관
+* index.md / index.html 등  
+    * 처음 실행되는 진입점
+
+
+* layout에는 3가지 형식 존재
+1. home (메인 페이지) : 홈페이지용 레이아웃. 메인 화면용. 글 목록(블로그 포스트 리스트) 같은 걸 자동으로 보여줄 수 있음.
+2. post (현재 작성 페이지): 일반 페이지용 레이아웃. 글 리스트 없이, 그냥 고정된 페이지 (About, Contact 등) 만들 때 사용.
+3. page (다른 페이지): 블로그 글(post) 하나하나에 적용하는 레이아웃. 글 본문 중심 + 작성일(date), 태그(tag) 등 표시할 수 있음.
+
+
+# 사이트 배포
+1. github public repository 생성 (readme.md 자동 생성안되도록)
+2. 로컬 프로젝트 내용 수정
+* _config.yml   
+    * baseurl: '/[your repository]' 
+    * url: 'https://[yout github acconunt].github.io'
+* 예시  
+    * baseurl: '/streamlit-study'
+    * url: 'https://github.com/min-soo-choi/'
+
+## 로컬에서 배포 순서
+1. git init (초기화)    
+2. git remote add origin(이름) [reop 주소]
+3. git add . (수정 내용 모두 스테이지로)
+4. git commit -m "내용" (저장소로 보냄)
+5. git push origin main (main branch 배포)
